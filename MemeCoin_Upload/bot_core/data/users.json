@@ -1,0 +1,16 @@
+[
+  {
+    "discordUserId": "670112477559914506",
+    "publicKey": "HboafrkZrYKkc7gjfJvKqF3RcdqxQHRuWdJkWY5D1PV7",
+    "encryptedPrivateKey": "970a154b6ed73e1dc5a1f560:a5e07ee4c96f28c6f28d31325aa0ba54:97959561d49d020cd2b374f7e324ba1a862cdc54f5d34f4beb0552a5c96d8e432c50f19c95c2ead0d4f8ecdc091c5def2e1adc484fdbf8d77190073fb1434d4c56734fd688ba67f80b1573d6b50c9339ae23166dd6e3c519",
+    "autoTradeEnabled": true,
+    "maxSolPerTrade": 0.01,
+    "maxSolPerDay": 0.03,
+    "spentTodaySol": 0.03,
+    "lastResetUtc": "2026-07-30",
+    "registeredAt": "2026-07-26T15:20:26.273Z",
+    "slippageBps": 0.08,
+    "livePositions": [],
+    "dashboardAuthToken": "f7ae09bd1ba3959e4d75a161f8198badb9e9ca74de994762219eeb661f3306c5"
+  }
+]

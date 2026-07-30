@@ -1,0 +1,1498 @@
+[
+  {
+    "input": {
+      "liquidityUsd": 50000,
+      "rugCheckScore": 5,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 35,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 40.5,
+    "symbol": "SMART_MONEY_WIN"
+  },
+  {
+    "input": {
+      "liquidityUsd": 20000,
+      "rugCheckScore": 10,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 85,
+        "creatorBalance": 500000000
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -60,
+    "symbol": "DEV_HOARD_RUG"
+  },
+  {
+    "input": {
+      "liquidityUsd": 100000,
+      "rugCheckScore": 15,
+      "insiderMetrics": {
+        "insidersDetected": 0,
+        "top10Concentration": 10,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0.8
+    },
+    "pnlPercent": 15,
+    "symbol": "NO_INSIDER_SAFE"
+  },
+  {
+    "input": {
+      "liquidityUsd": 2000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 95,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -99,
+    "symbol": "INSIDER_SCAM"
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.951942067149435,
+    "symbol": "BULLGOD",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.3348095659876,
+    "symbol": "Pusheen",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.589161368452924,
+    "symbol": "BabyT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 87.2996300863132,
+    "symbol": "CATE",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.521210128247285,
+    "symbol": "Starcat",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.79339561155769,
+    "symbol": "Miu",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.547826086956523,
+    "symbol": "BTK",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.520241171403963,
+    "symbol": "Cog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.617848970251707,
+    "symbol": "Peigengoo",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -22.52252252252252,
+    "symbol": "SalaryDog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -21.958456973293767,
+    "symbol": "#memecoin",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -80.14059753954307,
+    "symbol": "TBB",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.472468916518647,
+    "symbol": "SalaryDog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 42.52595504485435,
+    "symbol": "IF",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.771812080536915,
+    "symbol": "Peigengoo",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -17.883055911224933,
+    "symbol": "SELLER",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 27.3021582733813,
+    "symbol": "SalaryDog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.959468017732739,
+    "symbol": "Erc",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 33.64701171288417,
+    "symbol": "CATCOIN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -17.90220820189274,
+    "symbol": "Ballerina",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.776710684273706,
+    "symbol": "cope",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -28.785122296341214,
+    "symbol": "BROKER",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.937331172339276,
+    "symbol": "PBTC",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.14814814814814,
+    "symbol": "Brötchen",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -17.735849056603776,
+    "symbol": "KET",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -21.104122990915446,
+    "symbol": "POTUS",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.990453460620527,
+    "symbol": "HBULL",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 46.493414026343885,
+    "symbol": "TTT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 25.263601855757074,
+    "symbol": "Tsujicoin",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 27.085124677558035,
+    "symbol": "Tiana",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -35.99395313681028,
+    "symbol": "NONGWAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 34.34831641694862,
+    "symbol": "Nongwan",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -17.788527988942633,
+    "symbol": "Nongwan",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -22.693931984885527,
+    "symbol": "WAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 29.136163982430446,
+    "symbol": "Onigiri",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 26.24053826745164,
+    "symbol": "GTAVI",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 30.16605166051661,
+    "symbol": "SAMECAT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 25.824114426192875,
+    "symbol": "Sydney",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 55.50329256820321,
+    "symbol": "JOEY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.307905686546466,
+    "symbol": "Sydney",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 27.32467532467533,
+    "symbol": "JOEY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.689717925386717,
+    "symbol": "Peigengoo",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 32.49406665978743,
+    "symbol": "JOEY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 27.908689248895435,
+    "symbol": "Sydney",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 28.93371757925071,
+    "symbol": "SAMECAT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 26.18362542505886,
+    "symbol": "Balloon",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.133531157270024,
+    "symbol": "JOEY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 38.998192066361796,
+    "symbol": "whitedog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.78440808469683,
+    "symbol": "STEPAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.447630193095389,
+    "symbol": "BabyT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 28.17028985507246,
+    "symbol": "Ginan",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -15.655494272380146,
+    "symbol": "Peigengoo",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.638733705772804,
+    "symbol": "NPC",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 26.69456066945606,
+    "symbol": "DickButt",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -98.71967654986523,
+    "symbol": "Ginan",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -21.712707182320436,
+    "symbol": "SAMECAT",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -40.95416483032173,
+    "symbol": "Sasanka",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 36.168307967770815,
+    "symbol": "KITTY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -21.914008321775317,
+    "symbol": "whitedog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 27.827763496143977,
+    "symbol": "STEPAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 26.323828920570268,
+    "symbol": "STEPAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -28.497409326424876,
+    "symbol": "KITTY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.99328859060403,
+    "symbol": "KITTY",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -20.685169124024284,
+    "symbol": "STEPAN",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 1
+    },
+    "pnlPercent": 84.95539334955394,
+    "symbol": "whitedog",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.572257690075446,
+    "symbol": "POLRAC",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -18.159670164917536,
+    "symbol": "Sydney",
+    "lowQuality": true
+  },
+  {
+    "input": {
+      "liquidityUsd": 15000,
+      "rugCheckScore": 80,
+      "insiderMetrics": {
+        "insidersDetected": 1,
+        "top10Concentration": 30,
+        "creatorBalance": 0
+      }
+    },
+    "output": {
+      "score": 0
+    },
+    "pnlPercent": -16.823406478578885,
+    "symbol": "FartCat",
+    "lowQuality": true
+  },
+  {
+    "symbol": "DickButt",
+    "pnlPercent": -16.316858496953294,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SAMECAT",
+    "pnlPercent": -15.669745958429559,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Ryder",
+    "pnlPercent": 34.98935415188075,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "MISO",
+    "pnlPercent": -65.3277399056109,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SAYVAULT",
+    "pnlPercent": 33.55311355311355,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Smudge",
+    "pnlPercent": 31.559633027522942,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "UNTIE",
+    "pnlPercent": 29.799492970730597,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "MOONBULL",
+    "pnlPercent": -32.84981868200575,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "TRENCHLIFE",
+    "pnlPercent": 39.057102214996945,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "TULSA",
+    "pnlPercent": -16.964285714285708,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "GTAVI",
+    "pnlPercent": -36.72120418848168,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "BOGE",
+    "pnlPercent": 44.97041420118344,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "NEEGY",
+    "pnlPercent": 105.69579288025895,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SHAKIRADOG",
+    "pnlPercent": -23.03470540758677,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "ROCK",
+    "pnlPercent": 35.52800342026505,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Norma",
+    "pnlPercent": -17.816650469711696,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "BRUH",
+    "pnlPercent": -47.831737346101235,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Nugget",
+    "pnlPercent": 54.60815047021942,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "MOONDOGE",
+    "pnlPercent": 103.20616883116882,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SOL",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "XMONEY",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "WAN",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Tortuga",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Peigengoo",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "◎",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "DogMaxxing",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "drooling",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "NUTBUCKS",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SalaryCat",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "SNIPYCAT",
+    "pnlPercent": 0,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "BULLIEVE",
+    "pnlPercent": 27.628584433318153,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "BULLIEVE",
+    "pnlPercent": 27.628584433318153,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Faucinu",
+    "pnlPercent": 35.83673469387756,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Faucinu",
+    "pnlPercent": 35.83673469387756,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "DrTrump",
+    "pnlPercent": -15.797041906327038,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "DrTrump",
+    "pnlPercent": -15.797041906327038,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "ChooChoo",
+    "pnlPercent": -45.02347417840375,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "ChooChoo",
+    "pnlPercent": -45.02347417840375,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Faucate",
+    "pnlPercent": -22.42236024844719,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "Faucate",
+    "pnlPercent": -22.42236024844719,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "KEYCAT",
+    "pnlPercent": 26.680244399185337,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "KEYCAT",
+    "pnlPercent": 26.680244399185337,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "MarsCoin",
+    "pnlPercent": 29.220508545227187,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "MarsCoin",
+    "pnlPercent": 29.220508545227187,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "LUNACAT",
+    "pnlPercent": -99.02923181509178,
+    "originalStats": null,
+    "lowQuality": true
+  },
+  {
+    "symbol": "LUNACAT",
+    "pnlPercent": -99.02923181509178,
+    "originalStats": null,
+    "lowQuality": true
+  }
+]
