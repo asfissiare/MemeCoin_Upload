@@ -95,10 +95,10 @@ function renderHTML(stats, isPrivate = false) {
   ).join('');
 
   const portfolioRows = stats.trialPortfolios.map(p =>
-    `<tr><td>${p.userId}</td><td><span class="badge ${p.trialEnabled ? 'badge-green' : 'badge-red'}">${p.trialEnabled ? 'ACTIVE' : 'PAUSED'}</span></td><td class="counter">${p.balance.toFixed(4)}</td><td>${p.openPositions}</td><td>${p.closedPositions}</td></tr>`
+    `<tr><td>${p.userId}</td><td><span class="badge ${p.trialEnabled ? 'success' : 'danger'}">${p.trialEnabled ? 'ACTIVE' : 'PAUSED'}</span></td><td class="counter">${p.balance.toFixed(4)}</td><td>${p.openPositions}</td><td>${p.closedPositions}</td></tr>`
   ).join('');
   
-  const privateWarning = !isPrivate ? `<div class="glass-alert"><b>MODALITÀ PUBBLICA:</b> Stai visualizzando la dashboard globale. Usa il comando Discord per ottenere il tuo link privato.</div>` : '';
+  const privateWarning = !isPrivate ? `<div class="alert-private"><b>MODALITÀ PUBBLICA:</b> Stai visualizzando la dashboard globale. Usa il comando Discord per ottenere il tuo link privato.</div>` : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -107,168 +107,305 @@ function renderHTML(stats, isPrivate = false) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Trading V3 - Command Center</title>
 <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-color: #0b0f19;
-    --glass-bg: rgba(20, 27, 45, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --neon-cyan: #00f3ff;
-    --neon-purple: #bc13fe;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --green: #10b981;
-    --red: #ef4444;
-    --yellow: #f59e0b;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { 
-    background: radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(188, 19, 254, 0.1) 0%, transparent 20%),
-                var(--bg-color);
-    color: var(--text-main); 
-    font-family: 'Inter', system-ui, sans-serif; 
-    padding: 30px; 
-    min-height: 100vh;
-  }
-  h1 { font-size: 2rem; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); display: flex; align-items: center; gap: 15px;}
-  h2 { font-size: 1.2rem; margin: 30px 0 15px; color: var(--neon-cyan); text-transform: uppercase; letter-spacing: 1px;}
-  
-  .glass-alert {
-    background: rgba(239, 68, 68, 0.2);
-    border: 1px solid rgba(239, 68, 68, 0.4);
-    backdrop-filter: blur(10px);
-    color: #fca5a5;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1);
+    --bg-base: #09090b;
+    --bg-surface: #18181b;
+    --bg-surface-hover: #27272a;
+    --border: #27272a;
+    --text-main: #fafafa;
+    --text-muted: #a1a1aa;
+    
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    
+    --success: #10b981;
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --danger: #ef4444;
+    --danger-bg: rgba(239, 68, 68, 0.1);
+    --warning: #f59e0b;
   }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 30px; }
-  
-  .card { 
-    background: var(--glass-bg); 
-    border: 1px solid var(--glass-border); 
-    backdrop-filter: blur(12px); 
-    border-radius: 16px; 
-    padding: 24px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 2.5rem 5%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  .card::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-    opacity: 0; transition: opacity 0.3s ease;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2rem;
   }
-  .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-  .card:hover::before { opacity: 1; }
-  
-  .card .label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px;}
-  .card .value { font-size: 1.8rem; font-weight: 700; text-shadow: 0 0 10px rgba(255,255,255,0.1); }
-  
-  .green { color: var(--green); text-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
-  .red { color: var(--red); text-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
-  .yellow { color: var(--yellow); text-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
-  
-  table { 
-    width: 100%; border-collapse: separate; border-spacing: 0 8px; 
-    margin-bottom: 30px; 
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin: 2.5rem 0 1rem;
   }
-  th { padding: 12px 16px; text-align: left; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--glass-border);}
-  td { 
-    padding: 16px; font-size: 0.95rem; 
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+
+  .font-medium { font-weight: 500; }
+  .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  .text-muted { color: var(--text-muted); }
+  .text-success { color: var(--success); }
+  .text-danger { color: var(--danger); }
+  .text-warning { color: var(--warning); }
+
+  .grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
-  tr td:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-left: 1px solid var(--glass-border); }
-  tr td:last-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-right: 1px solid var(--glass-border); }
-  tr td { border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); transition: background 0.2s;}
-  tr:hover td { background: rgba(255,255,255,0.05); }
+
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px -4px var(--accent-glow);
+  }
+
+  .card .label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .card .value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
 
   .badge {
-    background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--bg-surface-hover);
+    color: var(--text-main);
   }
-  .badge-green { background: rgba(16, 185, 129, 0.2); color: var(--green); border: 1px solid rgba(16, 185, 129, 0.3);}
-  .badge-red { background: rgba(239, 68, 68, 0.2); color: var(--red); border: 1px solid rgba(239, 68, 68, 0.3);}
+  .badge.success { background: var(--success-bg); color: var(--success); border: 1px solid rgba(16,185,129,0.2); }
+  .badge.danger { background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239,68,68,0.2); }
 
-  @keyframes pulse-live {
-    0% { opacity: 1; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-    70% { opacity: 0.7; box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-    100% { opacity: 1; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 2rem;
   }
-  .live-dot {
-    display: inline-block; width: 10px; height: 10px; border-radius: 50%;
-    background: var(--red); margin-right: 8px;
-    animation: pulse-live 2s infinite;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  th, td {
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+  }
+
+  th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg-surface-hover); }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem !important;
+    color: var(--text-muted);
   }
 
   #chart-container {
-    width: 100%; height: 350px; background: var(--glass-bg); border: 1px solid var(--glass-border);
-    border-radius: 16px; padding: 10px; margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 400px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
-  .footer { margin-top: 40px; font-size: 0.8rem; color: var(--text-muted); text-align: center; padding-top: 20px; border-top: 1px solid var(--glass-border); }
+  .live-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--danger);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+
+  .alert-private {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footer {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
 </style>
 </head>
 <body>
-<h1><span class="live-dot"></span> AI TRADING V3 COMMAND CENTER</h1>
+
+<h1><span class="live-indicator"></span> AI Trading V3</h1>
 ${privateWarning}
 
 <div id="chart-container"></div>
 
-<div class="grid">
-  <div class="card"><div class="label">Uptime</div><div class="value">${Math.floor(stats.uptime / 3600)}h ${Math.floor((stats.uptime % 3600) / 60)}m</div></div>
-  <div class="card"><div class="label">Mode</div><div class="value ${stats.dryRun ? 'yellow' : 'green'}">${stats.dryRun ? 'DRY RUN' : 'LIVE'}</div></div>
-  <div class="card"><div class="label">Kill Switch</div><div class="value ${stats.killSwitch ? 'red' : 'green'}">${stats.killSwitch ? 'ACTIVE' : 'OFF'}</div></div>
-  <div class="card"><div class="label">Proxies</div><div class="value">${stats.activeProxies}</div></div>
-  <div class="card"><div class="label">Spent Today</div><div class="value">${stats.spentTodaySol.toFixed(4)} / ${stats.maxSolPerDay} SOL</div></div>
+<div class="grid-stats">
+  <div class="card">
+    <div class="label">Uptime</div>
+    <div class="value font-mono">${Math.floor(stats.uptime / 3600)}h ${Math.floor((stats.uptime % 3600) / 60)}m</div>
+  </div>
+  <div class="card">
+    <div class="label">Mode</div>
+    <div class="value ${stats.dryRun ? 'text-warning' : 'text-success'}">${stats.dryRun ? 'DRY RUN' : 'LIVE'}</div>
+  </div>
+  <div class="card">
+    <div class="label">Kill Switch</div>
+    <div class="value ${stats.killSwitch ? 'text-danger' : 'text-success'}">${stats.killSwitch ? 'ACTIVE' : 'OFF'}</div>
+  </div>
+  <div class="card">
+    <div class="label">Active Proxies</div>
+    <div class="value font-mono">${stats.activeProxies}</div>
+  </div>
+  <div class="card">
+    <div class="label">Spent Today (SOL)</div>
+    <div class="value font-mono">${stats.spentTodaySol.toFixed(4)} <span class="text-muted" style="font-size: 0.875rem;">/ ${stats.maxSolPerDay}</span></div>
+  </div>
 </div>
 
-<h2>RECENT CANDIDATES (GLOBAL)</h2>
-<table>
-<tr><th>Symbol</th><th>Name</th><th>Chain</th><th>Price</th><th>Liquidity</th><th>Vol 24h</th></tr>
-${candidateRows || '<tr><td colspan="6" style="text-align:center; padding: 30px; color:#64748b;">No candidates detected recently</td></tr>'}
-</table>
+<h2>Recent Candidates (Global)</h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>Symbol</th><th>Name</th><th>Chain</th><th>Price</th><th>Liquidity</th><th>Vol 24h</th></tr>
+    </thead>
+    <tbody>
+      ${candidateRows || '<tr><td colspan="6" class="empty-state">Nessun candidato rilevato di recente</td></tr>'}
+    </tbody>
+  </table>
+</div>
 
-<h2>YOUR LIVE POSITIONS (REAL MONEY)</h2>
-<table>
-<tr><th>User</th><th>Symbol</th><th>Buy Cost (SOL)</th><th>Live PNL %</th></tr>
-${isPrivate ? (stats.livePositions.length > 0 ? stats.livePositions.map(p => `<tr><td>${p.userId}</td><td><span class="badge">${p.symbol}</span></td><td>${p.buyPriceSol.toFixed(4)} <span style="color:#64748b; font-size:0.8em">SOL</span></td><td class="${p.latestPnlPercent > 0 ? 'green' : (p.latestPnlPercent < 0 ? 'red' : '')}"><b>${p.latestPnlPercent !== null ? p.latestPnlPercent.toFixed(2) + '%' : 'Calculating...'}</b></td></tr>`).join('') : '<tr><td colspan="4" style="text-align:center; padding: 30px; color:#64748b;">No active live positions</td></tr>') : '<tr><td colspan="4" style="text-align:center; padding: 30px; color:#ef4444;">Access restricted. Use your private link.</td></tr>'}
-</table>
+<h2>Your Live Positions</h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>User</th><th>Symbol</th><th>Buy Cost (SOL)</th><th>Live PNL %</th></tr>
+    </thead>
+    <tbody>
+      ${isPrivate ? (stats.livePositions.length > 0 ? stats.livePositions.map(p => `
+        <tr>
+          <td class="font-mono text-muted">${p.userId}</td>
+          <td><span class="badge">${p.symbol}</span></td>
+          <td class="font-mono">${p.buyPriceSol.toFixed(4)}</td>
+          <td class="font-medium font-mono ${p.latestPnlPercent > 0 ? 'text-success' : (p.latestPnlPercent < 0 ? 'text-danger' : '')}">
+            ${p.latestPnlPercent !== null ? (p.latestPnlPercent > 0 ? '+' : '') + p.latestPnlPercent.toFixed(2) + '%' : 'Calculating...'}
+          </td>
+        </tr>`).join('') : '<tr><td colspan="4" class="empty-state">Nessuna posizione live attiva</td></tr>') : '<tr><td colspan="4" class="empty-state">Accesso limitato. Usa il tuo link privato per visualizzare.</td></tr>'}
+    </tbody>
+  </table>
+</div>
 
-<h2>YOUR TRIAL PORTFOLIOS</h2>
-<table>
-<tr><th>User</th><th>Status</th><th>Balance (SOL)</th><th>Open</th><th>Closed</th></tr>
-${isPrivate ? (portfolioRows || '<tr><td colspan="5" style="text-align:center; padding: 30px; color:#64748b;">No trial portfolios active</td></tr>') : '<tr><td colspan="5" style="text-align:center; padding: 30px; color:#ef4444;">Access restricted. Use your private link.</td></tr>'}
-</table>
+<h2>Your Trial Portfolios</h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr><th>User</th><th>Status</th><th>Balance (SOL)</th><th>Open Pos</th><th>Closed Pos</th></tr>
+    </thead>
+    <tbody>
+      ${isPrivate ? (portfolioRows || '<tr><td colspan="5" class="empty-state">Nessun portfolio trial attivo</td></tr>') : '<tr><td colspan="5" class="empty-state">Accesso limitato. Usa il tuo link privato per visualizzare.</td></tr>'}
+    </tbody>
+  </table>
+</div>
 
-<div class="footer">Auto-refresh every 15s | Port ${config.DASHBOARD_PORT || 3000} | Protected by AI Trading V3</div>
+<div class="footer">
+  Auto-refresh ogni 15s &bull; Porta ${config.DASHBOARD_PORT || 3000} &bull; Protetto da AI Trading V3
+</div>
 
 <script>
-  // Inizializza grafico TradingView (Simulazione PnL / Attività)
   const chartProperties = {
     autoSize: true,
-    layout: { background: { type: 'solid', color: 'transparent' }, textColor: '#94a3b8' },
-    grid: { vertLines: { color: 'rgba(255,255,255,0.05)' }, horzLines: { color: 'rgba(255,255,255,0.05)' } },
-    timeScale: { timeVisible: true, secondsVisible: false },
+    layout: { background: { type: 'solid', color: 'transparent' }, textColor: '#a1a1aa' },
+    grid: { vertLines: { color: '#27272a' }, horzLines: { color: '#27272a' } },
+    timeScale: { timeVisible: true, secondsVisible: false, borderColor: '#27272a' },
+    rightPriceScale: { borderColor: '#27272a' },
     crosshair: { mode: LightweightCharts.CrosshairMode.Normal }
   };
   const domElement = document.getElementById('chart-container');
   chartProperties.width = domElement.clientWidth || domElement.getBoundingClientRect().width || window.innerWidth - 60;
   chartProperties.height = domElement.clientHeight || domElement.getBoundingClientRect().height || 350;
+  
   const chart = LightweightCharts.createChart(domElement, chartProperties);
-  new ResizeObserver(entries => { if (entries.length === 0 || entries[0].target !== domElement) { return; } const newRect = entries[0].contentRect; chart.applyOptions({ height: newRect.height, width: newRect.width }); }).observe(domElement);
+  new ResizeObserver(entries => { 
+    if (entries.length === 0 || entries[0].target !== domElement) return; 
+    const newRect = entries[0].contentRect; 
+    chart.applyOptions({ height: newRect.height, width: newRect.width }); 
+  }).observe(domElement);
+  
   const lineSeries = chart.addAreaSeries({ 
-    lineColor: '#00f3ff', 
-    topColor: 'rgba(0, 243, 255, 0.4)', 
-    bottomColor: 'rgba(0, 243, 255, 0.0)',
+    lineColor: '#3b82f6', 
+    topColor: 'rgba(59, 130, 246, 0.3)', 
+    bottomColor: 'rgba(59, 130, 246, 0.0)',
     lineWidth: 2
   });
 
-  // Genera dati dummy per mostrare l'andamento del bot se non ci sono dati reali nel frontend
   let currentVal = 100;
   const data = [];
   const now = Math.floor(Date.now() / 1000);
@@ -278,7 +415,6 @@ ${isPrivate ? (portfolioRows || '<tr><td colspan="5" style="text-align:center; p
   }
   lineSeries.setData(data);
 
-  // Animazione contatori
   document.querySelectorAll('.counter').forEach(el => {
     const val = parseFloat(el.innerText);
     if(isNaN(val)) return;
@@ -292,7 +428,6 @@ ${isPrivate ? (portfolioRows || '<tr><td colspan="5" style="text-align:center; p
     }, 30);
   });
 
-  // Auto-refresh senza flashare lo schermo tramite fetch API (opzionale)
   setTimeout(() => {
     window.location.reload();
   }, 15000);
@@ -302,7 +437,7 @@ ${isPrivate ? (portfolioRows || '<tr><td colspan="5" style="text-align:center; p
 }
 
 export function startDashboard() {
-  const port = config.DASHBOARD_PORT || 3000;
+  const port = process.env.PORT || config.DASHBOARD_PORT || 3000;
 
   const server = http.createServer((req, res) => {
     try {
@@ -340,7 +475,7 @@ export function startDashboard() {
     }
   });
 
-  server.listen(port, '127.0.0.1', async () => {
+  server.listen(port, '0.0.0.0', async () => {
     console.log(`[DASHBOARD] Web dashboard available locally at http://localhost:${port}`);
     try {
       const tunnel = await localtunnel({ port: port });
