@@ -296,6 +296,14 @@ export class UserDatabase {
     this.save();
   }
 
+  setLanguage(discordUserId, lang) {
+    const user = this.users.get(discordUserId);
+    if (user) {
+      user.language = lang;
+      this.save();
+    }
+  }
+
   checkDailyReset(user) {
     const todayUtc = new Date().toISOString().split('T')[0];
     if (user.lastResetUtc !== todayUtc) {
